@@ -1,0 +1,683 @@
+.other{
+     width: 80vw !important;
+     border-radius:0 !important;
+     -webkit-border-radius: 0px !important;
+}
+
+
+.about {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+}
+
+.about:-webkit-scrollbar{
+    display: none;
+  }
+
+.icons {
+    fill: #fff;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
+    padding-top: 10rem;
+}
+
+.icons > a > img{
+    fill: #fff;
+    height: 10vw;
+    max-height: 80px;
+}
+
+/** PAGE STYLING **/
+
+* { /* Poor Man's Reset */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+@font-face {
+    font-family: "youngserif";
+    src: url("YoungSerif-Regular.otf");
+    src: url("youngserif-regular-webfont.woff") format("woff"),
+    url("youngserif-regular-webfont.woff2") format("woff2"),
+}
+
+body {
+    background: #fff;
+    overscroll-behavior:none;
+    overflow-x: hidden;
+}
+
+
+.about > img {
+height:100%;
+width:100%;
+object-fit: cover;
+object-position: right center;
+padding-top: 6rem;
+}
+
+
+       @media (max-width:950px) {
+            .about > img {
+
+        max-height: 50vw;
+
+            }
+        }
+
+       @media (min-width:950px) and (max-width: 1200px) {
+            .about > img {
+
+        max-height: 40vw;
+
+            }
+        }
+
+        @media (min-width:1200px) {
+            .about > img {
+
+        max-height: 50vh;
+
+            }
+        }
+
+.about > p {
+padding-right: 5rem;
+}
+
+        @media (max-width:500px) {
+            .about > p {
+
+                font-size: 0.8rem;
+                padding-right: 0.5;
+                letter-spacing: 0.1;
+                line-height: 1.2;
+                word-spacing: 1;
+
+            }
+
+        }
+
+        @media (min-width:500px) and (max-width:720px) {
+                    .about > p {
+
+                font-size: 0.9rem;
+                padding-right: 0.5;
+                letter-spacing: 0.1;
+                line-height: 1.2;
+                word-spacing: 1;
+
+                    }
+                }
+
+        @media (min-width:720px) and (max-width:950px) {
+                    .about > p {
+
+                font-size: 1rem;
+                padding-right: 1rem;
+
+                    }
+                }
+
+        @media (min-width:950px) {
+                    .about > p {
+                            align-self: center;
+                    }
+                }
+
+
+.twocolumns {
+    display:grid;
+    grid-template-columns: 20vw auto;
+    column-gap: 2rem;
+    grid-template-rows: auto;
+    align-self: flex-end;
+
+}
+
+.twocolumns-about {
+    display:grid;
+    grid-template-columns: 25vw auto;
+    column-gap: 2rem;
+    grid-template-rows: auto;
+    align-self: flex-end;
+
+}
+
+
+.light {
+    background:#fff;
+    color: #000;
+    padding: 3rem;
+
+}
+
+.dark {
+    background: #000;
+    color:#fff;
+    padding: 3rem;
+
+}
+
+.pad-top {
+    padding-top: 6rem;
+    display:grid;
+}
+
+.scroll-content{
+    overflow-y: scroll;
+
+}
+
+.no-scroll-content {
+    overflow-y:hidden;
+}
+
+.no-pad{
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 2rem;
+    padding-bottom: 1 rem;
+}
+
+a {
+    color:#000;
+    text-decoration:none;
+}
+
+h1 {
+    font-family: 'Gap Sans', sans-serif;
+    font-size: 3.5em;
+    color: #fff;
+    position: absolute;
+    z-index: 50;
+    
+}
+
+h2 {
+    font-family: 'Gap Sans', sans-serif;
+    font-size: 3.5em;
+    color: #000;
+    position:absolute;
+    z-index: 50;
+}
+
+h3 {
+    font-family: youngserif;
+    font-size: 2rem;
+
+}
+
+
+h4 {
+    font-family: youngserif;
+    font-size: 1rem;
+    padding:1rem;
+    position: fixed;
+    top:0;
+    right: 0;
+
+}
+
+p {
+    font-family: youngserif;
+    font-size: 1.1rem;
+    letter-spacing: 1.1;
+}
+
+.about > p {
+padding-right: 5rem;
+}
+
+@media (max-width:500px) {
+    .about > p {
+
+        font-size: 0.77rem;
+        padding-right: 0;
+
+    }
+
+}
+
+@media (min-width:500px) and (max-width:720px) {
+            .about > p {
+
+        font-size: 0.9rem;
+        padding-right: 0.5;
+        letter-spacing: 0.1;
+        line-height: 1.2;
+        word-spacing: 1;
+        padding-right: 0;
+
+            }
+        }
+
+@media (min-width:720px) and (max-width:950px) {
+            .about > p {
+
+        font-size: 1rem;
+        padding-right: 1rem;
+
+            }
+        }
+
+@media (min-width:950px) {
+            .about > p {
+                    align-self: center;
+            }
+        }
+
+/* 
+   GALLERY 
+            */  
+.container {
+  overflow-y: scroll;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19vw, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  grid-template-rows: repeat(auto-fit, minmax(19vh, 1fr));
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin-top: 5rem;
+}
+
+.container:-webkit-scrollbar{
+    display: none;
+  }
+
+.container > a {
+    height: 100%;
+    width: 100%;
+}
+
+.container > a > img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  display: block;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  transition: all 100ms ease-out;
+}
+.container > a > img:hover {
+  transform: scale(1.04);
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+/* 
+   GALLERY 
+            */  
+
+/* CARDS
+        DISPLAY
+            STYLING */
+
+
+:root {
+    --numcards: 5;
+}
+
+#cards {
+    padding-bottom: calc(var(--numcards) * var(--card-top-offset)); /* Make place at bottom, as items will slide to that position*/
+    margin-bottom: var(--card-margin); /* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
+    pointer-events: none;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+
+#card_1 {
+    --index: 1;
+    padding-top: 45vh;
+    height: 100vh;
+    width:  100vw;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+   }
+
+#card_2 {
+    --index: 2;
+    --card-top-offset: 5vh;
+    height: 100vh;
+    width:  100vw;
+    }
+
+#card_3 {
+    --index: 3;
+    --card-top-offset: 10vh;
+    height: 100vh;
+    width:  100vw;
+    display: flex;
+}
+
+#card_4 {
+    --index: 4;
+    --card-top-offset: 15vh;
+    height: 100vh;
+    width:  100vw;
+}
+
+#card_5 {
+    --index: 5;
+    --card-top-offset: 20vh;
+    height: 100vh;
+    width:  100vw;
+}
+
+.card {
+    position: sticky;
+    top: 0;
+    padding-top: calc(var(--index) * var(--card-top-offset));
+    
+}
+
+.card > div {
+    pointer-events: auto;
+}
+
+
+/** DEBUG **/
+
+#debug {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+}
+#debug::after {
+  content: " Show Debug";
+  margin-left: 1.5em;
+  color: white;
+  white-space: nowrap;
+}
+
+
+
+/* CARDS
+         DISPLAY
+                STYLING */
+
+/* MODAL
+        AND
+            CAROUSEL
+                    DIMENSIONS */
+
+.square{                /* DIMENSION FOR SQUARE IMAGES*/
+    --imgheight:80vh;
+    --imgwidth:80vh;
+}
+
+        @media (max-width:900px) {                 /* RESPONSIVE */
+            .square{
+                --imgheight:80vw;
+                --imgwidth:80vw;
+            }
+        }
+
+.landscape{                /* DIMENSION FOR LANDSCAPE IMAGES --> RATIO = 2:3*/
+    --imgwidth: 120vh;
+    --imgheight: 80vh;
+}
+
+        @media (max-width:1450px) {                 /* RESPONSIVE */
+            .landscape{
+                --imgheight: 53vw;
+                --imgwidth: 80vw;
+            }
+        }
+
+.portrait{                /* DIMENSION FOR PORTRAIT IMAGES --> RATIO = 2:3*/
+    --imgwidth:53vh;
+    --imgheight:80vh;
+}
+
+        @media (max-width:960px) {                 /* RESPONSIVE */
+            .portrait{
+                --imgheight: 80vw;
+                --imgwidth: 53vw;
+            }
+        }
+
+/* MODAL
+        AND
+            CAROUSEL
+                    DIMENSIONS */
+
+
+/* MODAL 
+         BOX 
+             STYLING */
+
+.blocker {                  /* POSITIONNING AND STYLING OF MODAL BACKGROUND */
+ position:fixed;
+ top:0;
+ right:0;
+ bottom:0;
+ left:0;
+ width:100%;
+ height:100%;
+ overflow:hidden;
+ z-index:1;
+ padding:20px;
+ box-sizing:border-box;
+ background-color:rgba(255,255,255,0.85);
+}
+
+.blocker:before {                  /* ALIGNS CONTENT IN THE MIDDLE */
+ content:"";
+ display:inline-block;
+ height:100%;
+ vertical-align:middle;
+}
+
+.modal {                  /* POSITIONNING AND STYLING OF MODAL CONTENT */
+ display:none;
+ vertical-align:middle;
+ position:relative;
+ z-index:2;
+ box-sizing:border-box;
+ width: var(--imgwidth);
+ height: var(--imgheight);
+}
+
+
+
+.modal > div > p {                  /* POSITIONNING AND STYLING OF MODAL CONTENT */
+    text-align: end;
+    color: #fff;
+    background-color:#000 ;
+    padding: 3rem 4rem 3rem 3rem;
+    margin-left: 5rem ;
+    margin-top: -2rem;
+    margin-right: -2rem;
+    width: 80vw;
+
+}
+
+.modal a.close-modal {                  /* POSITIONNING AND STYLING OF CLOSE MODAL ICON */
+ position:fixed;
+ z-index: 1000;
+ top:2rem;
+ right:2rem;
+ display:block;
+ width:1.5rem;
+ height:1.5rem;
+ text-indent:-9999px;
+ background-size:contain;
+ background-repeat:no-repeat;
+ background-position:center center;
+ background-image:url('icons/close.svg')
+}
+
+/* MODAL 
+         BOX 
+             STYLING */
+
+
+
+
+/* CAROUSEL 
+            STYLING */
+
+.slides {                 /* DIV FOR WHOLE LIST --> NEEDS TO BE THE SAME SIZE AS THE IMAGE TO BE ABLE TO CLICK OUTSIDE THE IMAGE TO CLOSE MODAL */
+    padding: 0;
+    height: var(--imgheight);
+    width:var(--imgwidth);
+    display: block;
+    position: relative;
+}
+
+
+.slides * {                  /* NOT SURE IF USEFULL */
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input { display: none; }                  /* HIDES SLIDES NOT IN FOCUS */
+
+.slide-container { display: block; }                  /* CONTROL POSITION OF THE SLIDES */
+
+.slide {                  /* POSITION, SIZING AND ANIMATION OF SLIDES */
+    top: 0;
+    opacity: 0;
+    height: var(--imgheight);
+    width: var(--imgwidth);
+    display: block;
+    position: absolute;
+    transform: translate(1,0);
+    transition: all .7s ease-in-out;
+}
+
+.slide img {                  /* SIZING OF IMAGES */
+    width: inherit;
+    height: inherit;
+}
+
+input:checked + .slide-container  .slide {                   /* WHEN NAV DOT SELECTED, CORRESPONDING IMAGE APPEARS */
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+
+.nav-dots {                  /* POSITIONING OF NAV DOTS */
+    width: 0;
+    bottom: 3rem;
+    left: calc(var(--imgwidth) + 1vw);
+    display: block;
+    position: absolute;
+    text-align: center;
+}
+
+.nav-dots .nav-dot {                  /* STYLING OF NAV DOTS */
+    width: 1rem;
+    height: 1rem;
+    margin: 0.5rem;
+    border-radius: 100%;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.nav-dots .nav-dot:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+input#img-1-labelpeche:checked ~ .nav-dots label#img-dot-1-labelpeche,                  /* NAV DOTS COLOR FOR CHECKED IMAGE */
+input#img-2-labelpeche:checked ~ .nav-dots label#img-dot-2-labelpeche,                  /* if not working, check that the id of dot and image is the same as in html and if there's no comma missing*/
+input#img-3-labelpeche:checked ~ .nav-dots label#img-dot-3-labelpeche,                  /* could be all together but more readable this way */
+input#img-4-labelpeche:checked ~ .nav-dots label#img-dot-4-labelpeche,
+input#img-5-labelpeche:checked ~ .nav-dots label#img-dot-5-labelpeche {
+    background: rgba(0,0,0);
+}
+
+input#img-1-gloomysunday:checked ~ .nav-dots label#img-dot-1-gloomysunday,
+input#img-2-gloomysunday:checked ~ .nav-dots label#img-dot-2-gloomysunday,
+input#img-3-gloomysunday:checked ~ .nav-dots label#img-dot-3-gloomysunday,
+input#img-4-gloomysunday:checked ~ .nav-dots label#img-dot-4-gloomysunday,
+input#img-5-gloomysunday:checked ~ .nav-dots label#img-dot-5-gloomysunday {
+    background: rgba(0,0,0);
+}
+
+
+input#img-1-alchimie:checked ~ .nav-dots label#img-dot-1-alchimie,
+input#img-2-alchimie:checked ~ .nav-dots label#img-dot-2-alchimie,
+input#img-3-alchimie:checked ~ .nav-dots label#img-dot-3-alchimie,
+input#img-4-alchimie:checked ~ .nav-dots label#img-dot-4-alchimie {
+    background: rgba(0,0,0);
+}
+
+input#img-1-posters:checked ~ .nav-dots label#img-dot-1-posters,
+input#img-2-posters:checked ~ .nav-dots label#img-dot-2-posters,
+input#img-3-posters:checked ~ .nav-dots label#img-dot-3-posters,
+input#img-4-posters:checked ~ .nav-dots label#img-dot-4-posters,
+input#img-5-posters:checked ~ .nav-dots label#img-dot-5-posters,
+input#img-6-posters:checked ~ .nav-dots label#img-dot-6-posters,
+input#img-7-posters:checked ~ .nav-dots label#img-dot-7-posters {
+    background: rgba(0,0,0);
+}
+
+input#img-1-autoportrait:checked ~ .nav-dots label#img-dot-1-autoportrait,
+input#img-2-autoportrait:checked ~ .nav-dots label#img-dot-2-autoportrait,
+input#img-3-autoportrait:checked ~ .nav-dots label#img-dot-3-autoportrait,
+input#img-4-autoportrait:checked ~ .nav-dots label#img-dot-4-autoportrait {
+    background: rgba(0,0,0);
+}
+
+input#img-1-zoo:checked ~ .nav-dots label#img-dot-1-zoo,
+input#img-2-zoo:checked ~ .nav-dots label#img-dot-2-zoo,
+input#img-3-zoo:checked ~ .nav-dots label#img-dot-3-zoo,
+input#img-4-zoo:checked ~ .nav-dots label#img-dot-4-zoo,
+input#img-5-zoo:checked ~ .nav-dots label#img-dot-5-zoo,
+input#img-6-zoo:checked ~ .nav-dots label#img-dot-6-zoo,
+input#img-7-zoo:checked ~ .nav-dots label#img-dot-7-zoo,
+input#img-8-zoo:checked ~ .nav-dots label#img-dot-8-zoo {
+    background: rgba(0,0,0);
+}
+
+input#img-1-tsarevna:checked ~ .nav-dots label#img-dot-1-tsarevna,
+input#img-2-tsarevna:checked ~ .nav-dots label#img-dot-2-tsarevna {
+    background: rgba(0,0,0);
+}
+
+input#img-1-croquis:checked ~ .nav-dots label#img-dot-1-croquis,
+input#img-2-croquis:checked ~ .nav-dots label#img-dot-2-croquis,
+input#img-3-croquis:checked ~ .nav-dots label#img-dot-3-croquis,
+input#img-4-croquis:checked ~ .nav-dots label#img-dot-4-croquis {
+    background: rgba(0,0,0);
+}
+
+/* CAROUSEL 
+            STYLING */
+
+.marquee {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 200px;
+  overflow-x: hidden;
+  font-family: youngserif;
+font-size: 1.5rem;
+line-height: 1.8;
+letter-spacing: 1.8;
+
+
+}
+
+.track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 32s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}

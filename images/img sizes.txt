@@ -1,0 +1,8 @@
+WEBSITE IMAGES RATIOS FOR MODAL SLIDES :
+
+/!\ ALWAYS CROP IMAGES ACCORDING TO THESE TO NOT ALTER THE LAYOUT /!\
+
+.square --> 1:1
+.landscape --> 3:2
+.portrait --> 2:3
+
