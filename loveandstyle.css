@@ -1,35 +1,7 @@
-.other{
-     width: 80vw !important;
-     border-radius:0 !important;
-     -webkit-border-radius: 0px !important;
-}
+/** PAGE 
+          STYLING **/
 
-
-.about {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-}
-
-.about:-webkit-scrollbar{
-    display: none;
-  }
-
-.icons {
-    fill: #fff;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
-    padding-top: 10rem;
-}
-
-.icons > a > img{
-    fill: #fff;
-    height: 10vw;
-    max-height: 80px;
-}
-
-/** PAGE STYLING **/
-
-* { /* Poor Man's Reset */
+* {                           /* Poor Man's Reset */
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -37,7 +9,7 @@
 
 
 
-@font-face {
+@font-face {                 /* font setting for texts (titles font comes from CDN, see link in html head) */
     font-family: "youngserif";
     src: url("YoungSerif-Regular.otf");
     src: url("youngserif-regular-webfont.woff") format("woff"),
@@ -48,15 +20,42 @@ body {
     background: #fff;
     overscroll-behavior:none;
     overflow-x: hidden;
+
 }
 
 
-.about > img {
+.icons {                           /* grid and layout settings for icons in contact card */
+    fill: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-top: 10rem;
+}
+@media (max-width:500px) {
+     .icons { 
+        padding-top: 5rem;  
+     }
+}
+
+
+.icons > a > img{
+    fill: #fff;
+    height: 9vw;
+    max-height: 80px;
+}
+
+
+.about > img {                 /* images styling for about section with responsive layout */
 height:100%;
 width:100%;
 object-fit: cover;
 object-position: right center;
 padding-top: 6rem;
+}
+
+@media (max-width:500px) {
+     .about > img {
+          padding-top: 4rem;
+     }
 }
 
 
@@ -84,14 +83,16 @@ padding-top: 6rem;
             }
         }
 
-.about > p {
+@media (min-width:500px) {                 /* text styling for about section with responsive layout */
+    .about > p {
 padding-right: 5rem;
+}
 }
 
         @media (max-width:500px) {
             .about > p {
 
-                font-size: 0.8rem;
+                font-size: 0.65rem;
                 padding-right: 0.5;
                 letter-spacing: 0.1;
                 line-height: 1.2;
@@ -129,7 +130,7 @@ padding-right: 5rem;
                 }
 
 
-.twocolumns {
+.twocolumns {                 /* grid setting for content inside cards */
     display:grid;
     grid-template-columns: 20vw auto;
     column-gap: 2rem;
@@ -138,7 +139,7 @@ padding-right: 5rem;
 
 }
 
-.twocolumns-about {
+.twocolumns-about {                 /* grid setting for content inside about card */
     display:grid;
     grid-template-columns: 25vw auto;
     column-gap: 2rem;
@@ -147,15 +148,21 @@ padding-right: 5rem;
 
 }
 
+@media (max-width:500px) {
+    .twocolumns-about {
+        column-gap: 0.5rem;
+    }
+}
 
-.light {
+
+.light {                 /* style setting for white cards */
     background:#fff;
     color: #000;
     padding: 3rem;
 
 }
 
-.dark {
+.dark {                 /* style setting for black cards */
     background: #000;
     color:#fff;
     padding: 3rem;
@@ -167,28 +174,44 @@ padding-right: 5rem;
     display:grid;
 }
 
+@media (max-width:500px) {
+     .pad-top {
+          padding-top: 4rem;}
+
+}
+
 .scroll-content{
     overflow-y: scroll;
 
 }
 
-.no-scroll-content {
-    overflow-y:hidden;
-}
-
-.no-pad{
+.no-pad{                 /* removes the padding */
     padding-right: 0;
     padding-left: 0;
     padding-top: 2rem;
     padding-bottom: 1 rem;
 }
 
-a {
+a {                /* changes link color */
     color:#000;
     text-decoration:none;
 }
 
-h1 {
+a:hover {
+    color:#3f3f3f ;
+}
+
+p > a {
+    color:#a9a9a9 ;
+    text-decoration:none;
+}
+
+p > a:hover {
+    color:#2a2a2a  ;
+    text-decoration:none;
+}
+
+h1 {                /* for titles on black background */
     font-family: 'Gap Sans', sans-serif;
     font-size: 3.5em;
     color: #fff;
@@ -197,7 +220,13 @@ h1 {
     
 }
 
-h2 {
+@media (max-width:500px) {
+     h1 {                
+     font-size:2rem
+     }
+}
+
+h2 {                /* for titles on white background */
     font-family: 'Gap Sans', sans-serif;
     font-size: 3.5em;
     color: #000;
@@ -205,10 +234,21 @@ h2 {
     z-index: 50;
 }
 
-h3 {
+@media (max-width:500px) {
+     h2 {
+     font-size:2rem
+     }
+}
+
+h3 {                /* for first text */
     font-family: youngserif;
     font-size: 2rem;
 
+}
+@media (max-width:500px) {
+     h3 {
+     font-size:1rem
+     }
 }
 
 
@@ -222,58 +262,19 @@ h4 {
 
 }
 
-p {
+p {                /* for introduction text (see l:101 for responsive layout)*/
     font-family: youngserif;
     font-size: 1.1rem;
     letter-spacing: 1.1;
 }
 
-.about > p {
-padding-right: 5rem;
-}
-
-@media (max-width:500px) {
-    .about > p {
-
-        font-size: 0.77rem;
-        padding-right: 0;
-
-    }
-
-}
-
-@media (min-width:500px) and (max-width:720px) {
-            .about > p {
-
-        font-size: 0.9rem;
-        padding-right: 0.5;
-        letter-spacing: 0.1;
-        line-height: 1.2;
-        word-spacing: 1;
-        padding-right: 0;
-
-            }
-        }
-
-@media (min-width:720px) and (max-width:950px) {
-            .about > p {
-
-        font-size: 1rem;
-        padding-right: 1rem;
-
-            }
-        }
-
-@media (min-width:950px) {
-            .about > p {
-                    align-self: center;
-            }
-        }
+/** PAGE 
+         STYLING **/
 
 /* 
    GALLERY 
             */  
-.container {
+.container {                 /* sets apearance and flexgrid for image gallery */
   overflow-y: scroll;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(19vw, 1fr));
@@ -281,11 +282,16 @@ padding-right: 5rem;
   padding: 1rem;
   grid-template-rows: repeat(auto-fit, minmax(19vh, 1fr));
   -ms-overflow-style: none;
-  scrollbar-width: none;
+  scrollbar-width: none;                /* so you don't see the inner scrollbar */
   margin-top: 5rem;
 }
 
-.container:-webkit-scrollbar{
+@media (max-width:500px) {                 /* layout fix for decreasing title size */
+     .container {margin-top: 3rem;
+     }
+}
+
+.container:-webkit-scrollbar{                 /* so you don't see the inner scrollbar */
     display: none;
   }
 
@@ -308,6 +314,14 @@ padding-right: 5rem;
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
 }
+
+@media (max-width:1370px) {
+     .container > a > img {
+     -webkit-filter: grayscale(0);
+     filter: grayscale(0);
+     }
+}
+
 /* 
    GALLERY 
             */  
@@ -324,19 +338,16 @@ padding-right: 5rem;
 #cards {
     padding-bottom: calc(var(--numcards) * var(--card-top-offset)); /* Make place at bottom, as items will slide to that position*/
     margin-bottom: var(--card-margin); /* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
-    pointer-events: none;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
+    pointer-events: none;                 /* disable click events in the cards so their margin dont impede on clicking events inside the cards (see l:382) */
+    
 }
 
 
-#card_1 {
+#card_1 {                  /* top offset makes the cards cascading */
     --index: 1;
     padding-top: 45vh;
     height: 100vh;
     width:  100vw;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
    }
 
 #card_2 {
@@ -372,15 +383,14 @@ padding-right: 5rem;
     position: sticky;
     top: 0;
     padding-top: calc(var(--index) * var(--card-top-offset));
-    
 }
 
-.card > div {
+.card > div {                 /* enable clicking events on contents of the cards */
     pointer-events: auto;
 }
 
 
-/** DEBUG **/
+/** DEBUG so the slides apear full screen**/ 
 
 #debug {
   position: fixed;
@@ -479,7 +489,7 @@ padding-right: 5rem;
  position:relative;
  z-index:2;
  box-sizing:border-box;
- width: var(--imgwidth);
+ width: calc(var(--imgwidth) + 5vh);
  height: var(--imgheight);
 }
 
@@ -660,7 +670,7 @@ input#img-4-croquis:checked ~ .nav-dots label#img-dot-4-croquis {
   position: relative;
   width: 100%;
   max-width: 100%;
-  height: 200px;
+  height: 5vh;
   overflow-x: hidden;
   font-family: youngserif;
 font-size: 1.5rem;
