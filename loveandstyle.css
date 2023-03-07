@@ -416,38 +416,38 @@ p {                /* for introduction text (see l:101 for responsive layout)*/
                     DIMENSIONS */
 
 .square{                /* DIMENSION FOR SQUARE IMAGES*/
-    --imgheight:80vh;
-    --imgwidth:80vh;
+    --imgheight:70vh;
+    --imgwidth:70vh;
 }
 
-        @media (max-width:900px) {                 /* RESPONSIVE */
+        @media (max-width:795px) {                 /* RESPONSIVE */
             .square{
-                --imgheight:80vw;
-                --imgwidth:80vw;
+                --imgheight:70vw;
+                --imgwidth:70vw;
             }
         }
 
 .landscape{                /* DIMENSION FOR LANDSCAPE IMAGES --> RATIO = 2:3*/
-    --imgwidth: 120vh;
-    --imgheight: 80vh;
+    --imgwidth: 105vh;
+    --imgheight: 70vh;
 }
 
-        @media (max-width:1450px) {                 /* RESPONSIVE */
+        @media (max-width:1170px) {                 /* RESPONSIVE */
             .landscape{
-                --imgheight: 53vw;
-                --imgwidth: 80vw;
+                --imgheight: 47vw;
+                --imgwidth: 70vw;
             }
         }
 
 .portrait{                /* DIMENSION FOR PORTRAIT IMAGES --> RATIO = 2:3*/
-    --imgwidth:53vh;
-    --imgheight:80vh;
+    --imgwidth:47vh;
+    --imgheight:70vh;
 }
 
-        @media (max-width:960px) {                 /* RESPONSIVE */
+        @media (max-width:730px) {                 /* RESPONSIVE */
             .portrait{
-                --imgheight: 80vw;
-                --imgwidth: 53vw;
+                --imgheight: 70vw;
+                --imgwidth: 47vw;
             }
         }
 
@@ -486,11 +486,12 @@ p {                /* for introduction text (see l:101 for responsive layout)*/
 .modal {                  /* POSITIONNING AND STYLING OF MODAL CONTENT */
  display:none;
  vertical-align:middle;
- position:relative;
+ position:fixed;
  z-index:2;
  box-sizing:border-box;
  width: calc(var(--imgwidth) + 5vh);
  height: var(--imgheight);
+ margin-top: 3.5rem;
 }
 
 
@@ -574,6 +575,35 @@ input:checked + .slide-container  .slide {                   /* WHEN NAV DOT SEL
     opacity: 1;
     transition: opacity 1s ease-in-out;
 }
+
+.nav label {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    z-index: 9;
+    color: #000;
+    font-size: 40pt;
+    font-family: "youngserif";
+    rotate: 90deg;
+    right: -1vh;
+}
+
+.nav .prev { top: calc(var(--imgheight) + 7vh); }
+
+.nav .next { top: calc(var(--imgheight) + 17vh); }
+
+@media (max-width:795px) {                 /* RESPONSIVE */
+            .nav .prev{
+                top: calc(var(--imgheight) - 8vh);
+ 
+            }
+
+            .nav .next{
+                top: calc(var(--imgheight) - 2vh);
+            }
+        }
+
+input:checked + .slide-container .nav label { display: block; }
 
 
 .nav-dots {                  /* POSITIONING OF NAV DOTS */
