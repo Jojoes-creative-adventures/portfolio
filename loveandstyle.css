@@ -28,11 +28,13 @@ body {
     fill: #fff;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding-top: 10rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 @media (max-width:500px) {
      .icons { 
-        padding-top: 5rem;  
+        padding-top: 5rem; 
+        padding-bottom: 5rem; 
      }
 }
 
@@ -473,7 +475,8 @@ p {                /* for introduction text (see l:101 for responsive layout)*/
  z-index:1;
  padding:20px;
  box-sizing:border-box;
- background-color:rgba(255,255,255,0.85);
+ background-color:rgba(255,255,255,0.8);
+ backdrop-filter: blur(20px);
 }
 
 .blocker:before {                  /* ALIGNS CONTENT IN THE MIDDLE */
@@ -521,6 +524,10 @@ p {                /* for introduction text (see l:101 for responsive layout)*/
  background-repeat:no-repeat;
  background-position:center center;
  background-image:url('icons/close.svg')
+}
+
+.video {
+    height:var(--imgheight);
 }
 
 /* MODAL 
@@ -637,11 +644,9 @@ input#img-5-labelpeche:checked ~ .nav-dots label#img-dot-5-labelpeche {
     background: rgba(0,0,0);
 }
 
-input#img-1-gloomysunday:checked ~ .nav-dots label#img-dot-1-gloomysunday,
-input#img-2-gloomysunday:checked ~ .nav-dots label#img-dot-2-gloomysunday,
-input#img-3-gloomysunday:checked ~ .nav-dots label#img-dot-3-gloomysunday,
-input#img-4-gloomysunday:checked ~ .nav-dots label#img-dot-4-gloomysunday,
-input#img-5-gloomysunday:checked ~ .nav-dots label#img-dot-5-gloomysunday {
+input#img-1-numerisdata:checked ~ .nav-dots label#img-dot-1-numerisdata,
+input#img-2-numerisdata:checked ~ .nav-dots label#img-dot-2-numerisdata,
+input#img-3-numerisdata:checked ~ .nav-dots label#img-dot-3-numerisdata{
     background: rgba(0,0,0);
 }
 
@@ -663,26 +668,19 @@ input#img-7-posters:checked ~ .nav-dots label#img-dot-7-posters {
     background: rgba(0,0,0);
 }
 
-input#img-1-autoportrait:checked ~ .nav-dots label#img-dot-1-autoportrait,
-input#img-2-autoportrait:checked ~ .nav-dots label#img-dot-2-autoportrait,
-input#img-3-autoportrait:checked ~ .nav-dots label#img-dot-3-autoportrait,
-input#img-4-autoportrait:checked ~ .nav-dots label#img-dot-4-autoportrait {
+input#img-1-jdsysteme:checked ~ .nav-dots label#img-dot-1-jdsysteme,
+input#img-2-jdsysteme:checked ~ .nav-dots label#img-dot-2-jdsysteme,
+input#img-3-jdsysteme:checked ~ .nav-dots label#img-dot-3-jdsysteme,
+input#img-4-jdsysteme:checked ~ .nav-dots label#img-dot-4-jdsysteme,
+input#img-5-jdsysteme:checked ~ .nav-dots label#img-dot-5-jdsysteme {
     background: rgba(0,0,0);
 }
 
-input#img-1-zoo:checked ~ .nav-dots label#img-dot-1-zoo,
-input#img-2-zoo:checked ~ .nav-dots label#img-dot-2-zoo,
-input#img-3-zoo:checked ~ .nav-dots label#img-dot-3-zoo,
-input#img-4-zoo:checked ~ .nav-dots label#img-dot-4-zoo,
-input#img-5-zoo:checked ~ .nav-dots label#img-dot-5-zoo,
-input#img-6-zoo:checked ~ .nav-dots label#img-dot-6-zoo,
-input#img-7-zoo:checked ~ .nav-dots label#img-dot-7-zoo,
-input#img-8-zoo:checked ~ .nav-dots label#img-dot-8-zoo {
-    background: rgba(0,0,0);
-}
-
-input#img-1-tsarevna:checked ~ .nav-dots label#img-dot-1-tsarevna,
-input#img-2-tsarevna:checked ~ .nav-dots label#img-dot-2-tsarevna {
+input#img-1-aticcitea:checked ~ .nav-dots label#img-dot-1-aticcitea,
+input#img-2-aticcitea:checked ~ .nav-dots label#img-dot-2-aticcitea,
+input#img-3-aticcitea:checked ~ .nav-dots label#img-dot-3-aticcitea,
+input#img-4-aticcitea:checked ~ .nav-dots label#img-dot-4-aticcitea,
+input#img-5-aticcitea:checked ~ .nav-dots label#img-dot-5-aticcitea {
     background: rgba(0,0,0);
 }
 
