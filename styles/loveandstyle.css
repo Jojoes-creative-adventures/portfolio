@@ -629,6 +629,7 @@ a { font-family: Avara_Bold Italic;
     justify-self: center;
     height: 4vh;
     width: 4vh;
+    color: var(--contrast);
 
 }
 

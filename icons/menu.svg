@@ -11,7 +11,7 @@
       }
 
       .cls-2 {
-        fill: #000;
+        fill: light-dark(rgba(11,14,7,1), rgba(245,245,245,1));
       }
     </style>
   </defs>
