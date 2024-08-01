@@ -520,6 +520,8 @@ function linkClickHandler(event) {
     
         }
 
+ScrollTrigger.normalizeScroll(true);
+
 let worksAnimation = gsap.timeline({defaults :{duration: 1}, scrollTrigger:{
                                       trigger: '.works-animation',
                                       start : 'top bottom',
