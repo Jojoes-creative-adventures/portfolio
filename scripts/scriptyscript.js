@@ -778,24 +778,6 @@ contactAnimation.to(".ball", {x:toPX("-50vw"),y:toPX("25vh"), rotation:0,});
 contactAnimation.to(".ball", {scale:0});
 contactAnimation.to("#contactTitle",{ x:toPX("100vw"),y:toPX("0vh"),scale:1,});
 
-    const formElements = document.querySelectorAll('.contact-form input, .contact-form select, .contact-form textarea');
-
-    formElements.forEach(element => {
-        element.addEventListener('focus', function () {
-            // Disable all scroll triggers
-            gsap.utils.toArray('.gsap-trigger').forEach(trigger => {
-                trigger.disable();
-            });
-        });
-
-        element.addEventListener('blur', function () {
-            // Enable all scroll triggers
-            gsap.utils.toArray('.gsap-trigger').forEach(trigger => {
-                trigger.enable();
-            });
-        });
-    });
-
 }
 
 
