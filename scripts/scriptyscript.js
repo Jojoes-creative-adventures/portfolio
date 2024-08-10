@@ -427,7 +427,6 @@ contactAnimation.to(".header", { visibility:"visible",
 function handleNarrowScreen() {
     ScrollTrigger.config({
   syncInterval: 999999999,
-  ignoreMobileResize: true,
 });
   window.onload = ScrollTrigger.refresh();
 
