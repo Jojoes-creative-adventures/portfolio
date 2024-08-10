@@ -807,12 +807,12 @@ a { font-family: Avara_Bold Italic;
 }
 
 .about-animation{
-    margin-top: 70vh;
+    margin-top: 150vh;
 }
 
 .about {
    display: flex;
-   height: 100vh;
+   min-height: 100vh;
 }
 
 .photo {
@@ -830,7 +830,7 @@ a { font-family: Avara_Bold Italic;
 }
 
 .steps {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .steps > h3 {
@@ -842,7 +842,7 @@ a { font-family: Avara_Bold Italic;
   overflow-x: visible;}
 
 .line-steps {
-    height: 10vh;
+    height: 20vw;
     width: 490vw;
   margin-bottom: -20vw;
   margin-left: 40vw;
@@ -858,7 +858,7 @@ a { font-family: Avara_Bold Italic;
 }
 
 .card {
-    margin-top: 6vh;
+    margin-top: 10vw;
     padding-left: 10vw;
     padding-right: 10vw;
     text-align: center;
@@ -867,7 +867,7 @@ a { font-family: Avara_Bold Italic;
 }
 
 .card > p {
-    padding-top: 5vh;
+    padding-top: 10vw;
 }
 
 #onboarding {
@@ -929,6 +929,8 @@ a { font-family: Avara_Bold Italic;
         width: 80vw;
         margin-bottom: 10vh;
         display: grid;
+        min-height: 100vh;
+        position: relative;
     }
 
     .contact > h5 {
