@@ -929,6 +929,7 @@ a { font-family: Avara_Bold Italic;
         width: 80vw;
         margin-bottom: 10vh;
         display: grid;
+        padding-bottom:50vh;
     }
 
     .contact > h5 {
