@@ -52,7 +52,7 @@
 
 body {
   background-color: var(--background);
-  overflow-x: hidden;
+  
 }
 
 .lang-link {
@@ -71,6 +71,7 @@ body {
   body {
     scroll-behavior: smooth;
     overflow-y: scroll;
+    overflow-x: hidden;
     cursor: none;
   }
 
@@ -831,6 +832,8 @@ a { font-family: Avara_Bold Italic;
 
 .steps {
     height: 100dvh;
+    overflow-x: auto;
+    width: 100dvw;
 }
 
 .steps > h3 {
@@ -841,6 +844,7 @@ a { font-family: Avara_Bold Italic;
 .anim-wrapper {
   width: fit-content;
   overflow-x: scroll;
+  display: block;
 }
 
 .line-steps {
