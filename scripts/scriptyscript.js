@@ -3,6 +3,8 @@ gsap.registerPlugin(CustomEase);
 gsap.registerPlugin(ScrollToPlugin);
 gsap.config({ nullTargetWarn: false });
 
+ScrollTrigger.config({syncInterval: 999999999});
+
 emailjs.init({publicKey: 'OVF_ZXgXH96x2FaxA',});
 
 function toPX(value) {
