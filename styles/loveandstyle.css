@@ -839,7 +839,7 @@ a { font-family: Avara_Bold Italic;
 }
 
 .anim-wrapper {
-  overflow-x: visible;}
+  overflow-x: scroll;}
 
 .line-steps {
     height: 10dvh;
