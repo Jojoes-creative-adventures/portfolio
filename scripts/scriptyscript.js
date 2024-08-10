@@ -445,6 +445,10 @@ contactAnimation.to(".header", { visibility:"visible",
 
  // Function to handle narrow screen scripts
 function handleNarrowScreen() {
+    ScrollTrigger.config({
+  syncInterval: 999999999,
+  ignoreMobileResize: true,
+});
   window.onload = ScrollTrigger.refresh();
 
 //Header title
