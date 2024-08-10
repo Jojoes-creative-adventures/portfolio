@@ -601,8 +601,8 @@ a { font-family: Avara_Bold Italic;
 
 /* Header styling */
 .header {
-    height: 5vh;
-    width: 101vw;
+    height: 5dvh;
+    width: 101dvw;
     position: sticky;
     top: 0;
     left: 0;
@@ -614,8 +614,8 @@ a { font-family: Avara_Bold Italic;
 }
 .header-title {
  display: grid;
- grid-template-columns: 80vw 20vw;
- height: 5vh;
+ grid-template-columns: 80dvw 20dvw;
+ height: 5dvh;
 }
 
 .header-title > h2 {
@@ -627,8 +627,8 @@ a { font-family: Avara_Bold Italic;
     display: inline-grid;
     align-self: center;
     justify-self: center;
-    height: 4vh;
-    width: 4vh;
+    height: 4dvh;
+    width: 4dvh;
     color: var(--contrast);
 
 }
@@ -636,9 +636,9 @@ a { font-family: Avara_Bold Italic;
 .links-categories {
     display: grid;
     position: absolute;
-    top: 5vh;
-    height: 30vh;
-    width: 100vw;
+    top: 5dvh;
+    height: 30dvh;
+    width: 100dvw;
     grid-template-rows: 1fr 1fr;
 }
 
@@ -646,25 +646,25 @@ a { font-family: Avara_Bold Italic;
     font-size: 1.618rem;
     text-align: right;
     align-content: center;
-    padding: 4vh;
-    padding-top: 1vh;
+    padding: 4dvh;
+    padding-top: 1dvh;
 }
 
 .links-categories > a {
     font-size: 1.618rem;
     text-align: right;
     align-content: last baseline;
-    padding: 4vh;
-    padding-bottom: 3vh;
+    padding: 4dvh;
+    padding-bottom: 3dvh;
 }
 
 .links-languages {
     display: grid;
     position: absolute;
     position: absolute;
-    top: 44vh;
-    height: 19vh;
-    width: 100vw;
+    top: 44dvh;
+    height: 19dvh;
+    width: 100dvw;
 }
 
 /* Footer styling */
@@ -672,14 +672,14 @@ a { font-family: Avara_Bold Italic;
     display: grid;
     position: fixed;
     bottom: 0;
-    height: 30vh;
-    width: 100vw;
+    height: 30dvh;
+    width: 100dvw;
     justify-content: center;
     align-content: end;
-    grid-template-rows: 4rem 15vw 4rem 15vw;
+    grid-template-rows: 4rem 15dvw 4rem 15dvw;
     grid-template-columns: 1fr 1fr 1fr;
     z-index: 50;
-    padding-bottom: 1vh;
+    padding-bottom: 1dvh;
 }
 
 .footer > a {
@@ -691,15 +691,15 @@ a { font-family: Avara_Bold Italic;
     text-align: right;
     font-family: Avara_Bold Italic;
     font-size: 1.618rem;
-    padding-right: 4vh;
+    padding-right: 4dvh;
 }
 
 .footer > .icon {
-    height:15vw;
-    width: 15vw;
+    height:15dvw;
+    width: 15dvw;
     justify-self: end;
     align-self: center;
-    padding-right: 4vh;
+    padding-right: 4dvh;
 }
 
 .footer > .socials {
@@ -723,35 +723,35 @@ a { font-family: Avara_Bold Italic;
 }
 #close {
     position: absolute;
-    top: 3vw;
-    right: 6vw;
-    height: 4vh;
-    width: 4vh;
+    top: 3dvw;
+    right: 6dvw;
+    height: 4dvh;
+    width: 4dvh;
 }
 
 /*CONTENT STYLING*/
 
 .presentation {
-    padding-left: 5vw;
-    padding-right: 5vw;
+    padding-left: 5dvw;
+    padding-right: 5dvw;
 }
 
 .ball {
   position: fixed;
   top: 50%;
-  left: 8vw;
+  left: 8dvw;
   z-index: 20;
   mix-blend-mode: exclusion;
 }
 
 .category-nav {
-  height: 30vh;
+  height: 30dvh;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   text-align: right;
   position: fixed;
   bottom: 0;
   right: 0;
-  padding: 2vh;
+  padding: 2dvh;
   background-color: light-dark(rgba(245,245,245,0.6), rgba(11,14,7,0.6));
   display: grid;
 }
@@ -766,23 +766,23 @@ a { font-family: Avara_Bold Italic;
 }
 
 .works-wrapper{
-  width: 100vw;
-  padding-left: 5vw;
-  padding-right: 5vw;
+  width: 100dvw;
+  padding-left: 5dvw;
+  padding-right: 5dvw;
 }
 
 .gallery {
   display: grid;
-  grid-template-columns: 26.6vw 26.6vw 26.6vw;
-  grid-column-gap: 5vw;
-  grid-auto-rows: 53.3vw;
-  grid-row-gap : 5vh;
+  grid-template-columns: 26.6dvw 26.6dvw 26.6dvw;
+  grid-column-gap: 5dvw;
+  grid-auto-rows: 53.3dvw;
+  grid-row-gap : 5dvh;
   width: 100%;
-  padding-bottom: 30vh;
+  padding-bottom: 30dvh;
 }
 
 .gallery > a {
-   padding: 5vw;/*
+   padding: 5dvw;/*
    position:sticky;
    top:38vh;*/
 }
@@ -807,30 +807,30 @@ a { font-family: Avara_Bold Italic;
 }
 
 .about-animation{
-    margin-top: 70vh;
+    margin-top: 70dvh;
 }
 
 .about {
    display: flex;
-   height: 100vh;
+   height: 100dvh;
 }
 
 .photo {
-    height: 50vw ;
-    padding-left: 10vw;
+    height: 50dvw ;
+    padding-left: 10dvw;
 }
 
 .about-text {
     position: absolute;
-  left: 20vw;
-  border-left: solid var(--contrast) 1vw;
-  border-bottom: solid var(--contrast) 1vw;
-  padding: 7vw;
-  margin-right: 10vw;
+  left: 20dvw;
+  border-left: solid var(--contrast) 1dvw;
+  border-bottom: solid var(--contrast) 1dvw;
+  padding: 7dvw;
+  margin-right: 10dvw;
 }
 
 .steps {
-    height: 100vh;
+    height: 100dvh;
 }
 
 .steps > h3 {
@@ -842,32 +842,32 @@ a { font-family: Avara_Bold Italic;
   overflow-x: visible;}
 
 .line-steps {
-    height: 10vh;
-    width: 490vw;
-  margin-bottom: -20vw;
-  margin-left: 40vw;
+    height: 10dvh;
+    width: 490dvw;
+  margin-bottom: -20dvw;
+  margin-left: 40dvw;
   border-left: solid;
   border-bottom: solid;
 }
 
 .card-wrapper{
-    grid-template-columns: repeat(6, 70vw);
-        grid-column-gap: 20vw;
+    grid-template-columns: repeat(6, 70dvw);
+        grid-column-gap: 20dvw;
   display: grid;
-  padding-left: 70vw;
+  padding-left: 70dvw;
 }
 
 .card {
-    margin-top: 6vh;
-    padding-left: 10vw;
-    padding-right: 10vw;
+    margin-top: 6dvh;
+    padding-left: 10dvw;
+    padding-right: 10dvw;
     text-align: center;
     background-color: var(--background);
 
 }
 
 .card > p {
-    padding-top: 5vh;
+    padding-top: 5dvh;
 }
 
 #onboarding {
@@ -925,14 +925,14 @@ a { font-family: Avara_Bold Italic;
     }*/
 
     .contact {
-        margin-left: 10vw;
-        width: 80vw;
-        margin-bottom: 10vh;
+        margin-left: 10dvw;
+        width: 80dvw;
+        margin-bottom: 10dvh;
         display: grid;
     }
 
     .contact > h5 {
-        margin-top: 10vh;
+        margin-top: 10dvh;
         text-align: center;
     }
 
@@ -944,8 +944,8 @@ a { font-family: Avara_Bold Italic;
         display: grid;
         grid-template-rows: repeat(4, 1fr);
         padding: 10%;
-        border-bottom: solid var(--contrast) 0.5vh;
-        border-left: solid var(--contrast) 0.5vh;
+        border-bottom: solid var(--contrast) 0.5dvh;
+        border-left: solid var(--contrast) 0.5dvh;
         
         }
 
@@ -959,7 +959,7 @@ a { font-family: Avara_Bold Italic;
         font-weight: 400;
         font-style: normal;
         font-size: 1rem;
-        padding-bottom: 1.5vh;
+        padding-bottom: 1.5dvh;
         line-height: 1.5rem;
         }
     
@@ -990,11 +990,11 @@ a { font-family: Avara_Bold Italic;
     }
 
     form > button {
-        margin-top: 1vh;
+        margin-top: 1dvh;
         justify-self: end;
         display: flex;
-        width: 10vw;
-        height:8vh;
+        width: 10dvw;
+        height:8dvh;
         font-family: 'Avara_Bold', sans-serif;
         font-weight: 400;
         font-style: normal;
@@ -1008,7 +1008,7 @@ a { font-family: Avara_Bold Italic;
 
     #successMessage {
         display: none;
-        height:8vh;
+        height:8dvh;
         text-align: center;
         align-items: center;
         justify-content: center;
@@ -1016,7 +1016,7 @@ a { font-family: Avara_Bold Italic;
 
     #errorMessage {
         display: none;
-        height:8vh;
+        height:8dvh;
         text-align: center;
         align-items: center;
         justify-content: center;

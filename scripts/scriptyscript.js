@@ -5,26 +5,20 @@ gsap.config({ nullTargetWarn: false });
 
 emailjs.init({publicKey: 'OVF_ZXgXH96x2FaxA',});
 
-function toPX(value) {
-    return parseFloat(value) / 100 * (/vh/gi.test(value) ? window.innerHeight : window.innerWidth);
-}
+
 
 const currentLang = document.documentElement.lang;
-  console.log('Current Language:', currentLang);
 
   // Select all language links and log them
   const langLinks = document.querySelectorAll('.lang-link');
-  console.log('Language Links:', langLinks);
 
   // Iterate over the language links
   langLinks.forEach(link => {
     // Log the language of each link
     const linkLang = link.getAttribute('data-lang');
-    console.log('Link Language:', linkLang);
 
     // Check if the link's language matches the current language
     if (linkLang === currentLang) {
-      console.log('Matching Language Link Found:', link);
       link.classList.add('inactive');
     } else {
       link.classList.remove('inactive');
@@ -47,9 +41,7 @@ const currentLang = document.documentElement.lang;
           emailjs.sendForm(serviceID, templateID, this).then(
             (response) => {
               sendButton.style.display = 'none';
-              console.log("success-button")
               successMessage.style.display = 'flex';
-              console.log("success-message")
             },
             (error) => {
               errorMessage.style.display = 'flex';
@@ -61,6 +53,10 @@ const currentLang = document.documentElement.lang;
 
 // Function to handle wide screen scripts
 function handleWideScreen() {
+
+  function toPX(value) {
+    return parseFloat(value) / 100 * (/vh/gi.test(value) ? window.innerHeight : window.innerWidth);
+  }
 
 var cursor = document.querySelector(".custom-cursor");
 const links = document.querySelectorAll('a, button');
@@ -200,15 +196,9 @@ worksAnimation.to(".header", { visibility:"visible",
   categoryNavLinks.forEach(link => {
     const targetId = link.getAttribute('href');
     const targetElement = document.querySelector(targetId);
-
-    if (targetElement) {
-      const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+      
       targetPositions[targetId] = targetPosition;
-
-      console.log(`Stored position for ${targetId}: ${targetPosition}`);
-    } else {
-      console.log('Target element not found for ID:', targetId);
-    }
   });
 
   // Add event listeners to links for scrolling
@@ -218,9 +208,6 @@ worksAnimation.to(".header", { visibility:"visible",
       const targetId = link.getAttribute('href');
       const targetPosition = targetPositions[targetId];
 
-      if (targetPosition !== undefined) {
-        console.log('Scrolling to stored position for', targetId, targetPosition);
-
         gsap.to(window, {
           duration: 1,
           scrollTo: {
@@ -228,12 +215,7 @@ worksAnimation.to(".header", { visibility:"visible",
             autoKill: true  // Auto-adjusts scroll if interrupted
           },
           ease: 'power2.out',
-          onStart: () => console.log(`Scrolling to ${targetId}...`),
-          onComplete: () => console.log(`Scrolled to ${targetId}`)
         });
-      } else {
-        console.log('No stored position found for ID:', targetId);
-      }
     });
   });
 
@@ -450,6 +432,9 @@ function handleNarrowScreen() {
   ignoreMobileResize: true,
 });
   window.onload = ScrollTrigger.refresh();
+  function toPX(value) {
+    return parseFloat(value) / 100 * (/vh/gi.test(value) ? document.documentElement.clientHeight : document.documentElement.clientWidth);
+}
 
 //Header title
 const headerTitle = document.querySelector('.header-title h2');   
@@ -541,14 +526,11 @@ worksAnimation.to("#worksTitle",{ x:toPX("100vw"),y:toPX("-20vh"),scale:1,});
   const observerCallback = (entries, observer) => {
     entries.forEach(entry => {
       const categoryNav = document.querySelector('.category-nav');
-      console.log('IntersectionObserverEntry:', entry); // Log the entry
 
       if (entry.isIntersecting) {
-        console.log('.works-wrapper is in the viewport');
         categoryNav.classList.remove('hidden');
         categoryNav.classList.add('visible');
       } else {
-        console.log('.works-wrapper is out of the viewport');
         categoryNav.classList.remove('visible');
         categoryNav.classList.add('hidden');
       }
@@ -567,12 +549,8 @@ worksAnimation.to("#worksTitle",{ x:toPX("100vw"),y:toPX("-20vh"),scale:1,});
 
   // Select the target element and start observing
   const worksWrapper = document.querySelector('.works-wrapper');
-  if (worksWrapper) {
-    console.log('.works-wrapper element found:', worksWrapper); // Log the element
     observer.observe(worksWrapper);
-  } else {
-    console.error('.works-wrapper element not found');
-  }
+  
 
 
 window.onload = function() {
@@ -738,7 +716,7 @@ linkArtisticAnim.to("#link-artistic", {color:"var(--contrast)", fontSize : "1.61
 gsap.to("#link-artistic", {color:"var(--contrast-muted)", fontSize : "1rem",y:0, scrollTrigger:{trigger:"#artistic", start:"bottom bottom", end:"bottom 90%"}});
 gsap.fromTo(".ball", {scale:1},{ease:"power2.out",scale : 0, scrollTrigger: { trigger: "#artistic", start: 'bottom 80%', end: 'bottom 60%',scrub: true}});
 
-let aboutAnimation = gsap.timeline({defaults :{duration: 1}, scrollTrigger:{
+/*let aboutAnimation = gsap.timeline({defaults :{duration: 1}, scrollTrigger:{
                                       trigger: '.about-animation',
                                       start : 'top bottom',
                                       end : 'bottom center',
@@ -782,7 +760,7 @@ contactAnimation.fromTo("#contactTitle",{ x:toPX("-80vw"),y:toPX("0vh"),scale:1,
 contactAnimation.fromTo(".ball", {x:toPX("-50vw"),y:toPX("25vh"),scale:1},{x:toPX("70vw"),y:toPX("25vh"), rotation:"180deg"});
 contactAnimation.to(".ball", {x:toPX("-50vw"),y:toPX("25vh"), rotation:0,});
 contactAnimation.to(".ball", {scale:0});
-contactAnimation.to("#contactTitle",{ x:toPX("100vw"),y:toPX("0vh"),scale:1,});
+contactAnimation.to("#contactTitle",{ x:toPX("100vw"),y:toPX("0vh"),scale:1,});*/
 
 }
 

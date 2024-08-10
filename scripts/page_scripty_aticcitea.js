@@ -51,6 +51,7 @@ let isExpanded = false;
     function toggleMenu() {
         if (!isExpanded) {
             headerWrapper.style.height = "101vh";
+            headerWrapper.style.position = "absolute"
             toggleVisibility(categories);
             toggleVisibility(languages);
             toggleVisibility(footer);
@@ -58,6 +59,7 @@ let isExpanded = false;
             isExpanded = true;
         } else {
             headerWrapper.style.height = "5vh";
+            headerWrapper.style.position = "sticky"
             toggleVisibility(categories);
             toggleVisibility(languages);
             toggleVisibility(footer);
@@ -293,10 +295,13 @@ document.addEventListener('scroll', () => {
 
     // Initialize the animation for #imgIntro
     bringImageToFront("#imgIntro", "#intro", ".text");
-    bringImageToFront("#imgLogos", "#logos", ".text");
-    bringImageToFront("#imgMockups", "#mockups", ".text");
-    bringImageToFront("#imgComparatif", "#comparatif", ".text");
-    bringImageToFront("#imgOutro", "#outro", ".text");
+    bringImageToFront("#imgTypo", "#typo", ".text");
+    bringImageToFront("#imgTestTypo1", "#testTypo1", ".text");
+    bringImageToFront("#imgTestTypo2", "#testTypo2", ".text");
+    bringImageToFront("#imgTestTypoMix", "#testTypoMix", ".text");
+    bringImageToFront("#imgMepVers", "#mepVers", ".text");
+    bringImageToFront("#imgMepProse", "#mepProse", ".text");
+    bringImageToFront("#imgIntro", "#reliure", ".text");
 
     gsap.to (".project-info", { zIndex:0,
                                scrollTrigger: {
@@ -450,11 +455,14 @@ function handleNarrowScreen() {
 
     // Function to initialize all ScrollTriggers
     function initializeScrollTriggers() {
-    bringImageToFront("#imgIntro", "#intro", ".text");
-    bringImageToFront("#imgLogos", "#logos", ".text");
-    bringImageToFront("#imgMockups", "#mockups", ".text");
-    bringImageToFront("#imgComparatif", "#comparatif", ".text");
-    bringImageToFront("#imgOutro", "#outro", ".text");
+      bringImageToFront("#imgIntro", "#intro", ".text");
+      bringImageToFront("#imgTypo", "#typo", ".text");
+      bringImageToFront("#imgTestTypo1", "#testTypo1", ".text");
+      bringImageToFront("#imgTestTypo2", "#testTypo2", ".text");
+      bringImageToFront("#imgTestTypoMix", "#testTypoMix", ".text");
+      bringImageToFront("#imgMepVers", "#mepVers", ".text");
+      bringImageToFront("#imgMepProse", "#mepProse", ".text");
+      bringImageToFront("#imgIntro", "#reliure", ".text");
     }
      
         const images = document.querySelectorAll(".images");
@@ -470,17 +478,20 @@ function handleNarrowScreen() {
             // Event handler function
             function toggleProjectInfo() {
                 if (!isExpanded) {
-                    projectInfo.style.top = "80vw";
+                    projectInfo.style.top = "calc(66vw + 7vh)";
                     names2.style.display = "none";
                     text.style.overflowY = "scroll";
                     textShowHide.forEach(item => item.style.display = "block");
                     images.forEach(image => {
-                        image.style.top = "5vh";
+                        image.style.top = "7vh";
                     });
 
                     learnMoreButton.classList.add('learn-more-expanded');
-                        
-                    learnMoreButton.querySelector("h5").innerText = "Voir moins";
+                    if (document.documentElement.lang === "fr") {
+                      learnMoreButton.querySelector("h5").innerText = "Voir moins";
+                    } else {
+                      learnMoreButton.querySelector("h5").innerText = "See less";
+                    }
                     initializeScrollTriggers();
                     isExpanded = true;
                 } else {
@@ -490,10 +501,15 @@ function handleNarrowScreen() {
                     textShowHide.forEach(item => item.style.display = "none");
                     images.forEach(image => {
                         image.style.top = "";
-                        image.style.bottom = "30vh";
+                        image.style.bottom = "35vh";
                     });
+                    
                     learnMoreButton.classList.remove('learn-more-expanded');
-                    learnMoreButton.querySelector("h5").innerText = "Voir plus";
+                    if (document.documentElement.lang === "fr") {
+                      learnMoreButton.querySelector("h5").innerText = "Voir plus";
+                    } else {
+                      learnMoreButton.querySelector("h5").innerText = "Learn more";
+                    }
                     ScrollTrigger.getAll().forEach(trigger => trigger.kill());
                     isExpanded = false;
                 }
