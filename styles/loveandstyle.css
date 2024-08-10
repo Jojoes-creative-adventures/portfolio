@@ -839,7 +839,8 @@ a { font-family: Avara_Bold Italic;
 }
 
 .anim-wrapper {
-  overflow-x: scroll visible;}
+  width: fit-content;
+  overflow-x: scroll;}
 
 .line-steps {
     height: 10dvh;
@@ -927,7 +928,7 @@ a { font-family: Avara_Bold Italic;
     .contact {
         margin-left: 10dvw;
         width: 80dvw;
-        margin-bottom: 10dvh;
+        margin-bottom: 50dvh;
         display: grid;
     }
 
