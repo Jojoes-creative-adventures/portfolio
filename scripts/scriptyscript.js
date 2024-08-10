@@ -1,7 +1,7 @@
-gsap.registerPlugin(ScrollTrigger);
+/*gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(CustomEase);
 gsap.registerPlugin(ScrollToPlugin);
-gsap.config({ nullTargetWarn: false });
+gsap.config({ nullTargetWarn: false });*/
 
 emailjs.init({publicKey: 'OVF_ZXgXH96x2FaxA',});
 
