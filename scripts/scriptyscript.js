@@ -5,7 +5,9 @@ gsap.config({ nullTargetWarn: false });
 
 emailjs.init({publicKey: 'OVF_ZXgXH96x2FaxA',});
 
-
+function toPX(value) {
+    return parseFloat(value) / 100 * (/vh/gi.test(value) ? window.innerHeight : window.innerWidth);
+}
 
 const currentLang = document.documentElement.lang;
 
@@ -53,10 +55,6 @@ const currentLang = document.documentElement.lang;
 
 // Function to handle wide screen scripts
 function handleWideScreen() {
-
-  function toPX(value) {
-    return parseFloat(value) / 100 * (/vh/gi.test(value) ? window.innerHeight : window.innerWidth);
-  }
 
 var cursor = document.querySelector(".custom-cursor");
 const links = document.querySelectorAll('a, button');
@@ -432,9 +430,6 @@ function handleNarrowScreen() {
   ignoreMobileResize: true,
 });
   window.onload = ScrollTrigger.refresh();
-  function toPX(value) {
-    return parseFloat(value) / 100 * (/vh/gi.test(value) ? document.documentElement.clientHeight : document.documentElement.clientWidth);
-}
 
 //Header title
 const headerTitle = document.querySelector('.header-title h2');   
