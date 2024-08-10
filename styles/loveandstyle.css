@@ -840,7 +840,8 @@ a { font-family: Avara_Bold Italic;
 
 .anim-wrapper {
   width: fit-content;
-  overflow-x: scroll;}
+  overflow-x: scroll;
+}
 
 .line-steps {
     height: 10dvh;
