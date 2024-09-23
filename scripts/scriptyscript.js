@@ -731,13 +731,13 @@ let aboutTextAnimation = gsap.timeline({defaults :{duration: 1}, scrollTrigger:{
 aboutTextAnimation.fromTo(".photo", {filter: "blur(0px)", opacity:1} ,{filter: "blur(20px)", opacity:0.5, duration:5});
 aboutTextAnimation.fromTo(".about-text", {y:toPX("50vh")}, {y:0, duration:5}, "<");
 
-/*gsap.to(".anim-wrapper", {x:toPX("-505vw"), scrollTrigger : {
+gsap.to(".anim-wrapper", {x:toPX("-505vw"), scrollTrigger : {
                                                 trigger:'.steps',
                                                 start : 'top 20%',
                                                 end:'bottom center',
                                                 pin:true,
                                                 scrub:true,
-                                              }});*/
+                                              }});
 
 let contactAnimation = gsap.timeline({defaults :{duration: 1}, scrollTrigger:{
                                       trigger: '.contact-animation',
