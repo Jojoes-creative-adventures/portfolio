@@ -710,7 +710,7 @@ linkArtisticAnim.to("#link-artistic", {color:"var(--contrast)", fontSize : "1.61
 gsap.to("#link-artistic", {color:"var(--contrast-muted)", fontSize : "1rem",y:0, scrollTrigger:{trigger:"#artistic", start:"bottom bottom", end:"bottom 90%"}});
 gsap.fromTo(".ball", {scale:1},{ease:"power2.out",scale : 0, scrollTrigger: { trigger: "#artistic", start: 'bottom 80%', end: 'bottom 60%',scrub: true}});
 
-/*let aboutAnimation = gsap.timeline({defaults :{duration: 1}, scrollTrigger:{
+let aboutAnimation = gsap.timeline({defaults :{duration: 1}, scrollTrigger:{
                                       trigger: '.about-animation',
                                       start : 'top bottom',
                                       end : 'bottom center',
@@ -754,7 +754,7 @@ contactAnimation.fromTo("#contactTitle",{ x:toPX("-80vw"),y:toPX("0vh"),scale:1,
 contactAnimation.fromTo(".ball", {x:toPX("-50vw"),y:toPX("25vh"),scale:1},{x:toPX("70vw"),y:toPX("25vh"), rotation:"180deg"});
 contactAnimation.to(".ball", {x:toPX("-50vw"),y:toPX("25vh"), rotation:0,});
 contactAnimation.to(".ball", {scale:0});
-contactAnimation.to("#contactTitle",{ x:toPX("100vw"),y:toPX("0vh"),scale:1,});*/
+contactAnimation.to("#contactTitle",{ x:toPX("100vw"),y:toPX("0vh"),scale:1,});
 
 }
 
