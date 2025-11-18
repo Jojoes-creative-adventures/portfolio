@@ -81,12 +81,12 @@ if (!sessionStorage.getItem('homepageVisited')) {
         const animationDuration = Math.max(5, pageLoadTime / 1000);
 
         gsap.to(".loader .child", {
-            opacity: 1,
+            display: "",
             duration: animationDuration,
             ease: "power2.out",
             onComplete: () => {
                 gsap.to(".loader", {
-                    opacity: 0,
+                    display: "none",
                     duration: 1,
                     ease: "power2.out",
                     onComplete: () => {
