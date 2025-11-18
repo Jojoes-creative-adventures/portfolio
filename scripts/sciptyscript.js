@@ -104,6 +104,10 @@ if (!sessionStorage.getItem('homepageVisited')) {
     document.documentElement.style.overflow = "";
 }
 
+const boutonVoirPlus = document.querySelector('.voir-plus');
+
+    
+
 function handleNarrowScreen() {
     const hamburger = document.querySelector(".hamburger");
 
@@ -117,6 +121,7 @@ function handleNarrowScreen() {
     hamburger.style.zIndex = "1000"; // Ensure it appears above other elements
     hamburger.style.position = "relative"; // Adjust positioning if necessary
     const overlay = document.querySelector(".overlay");
+    const menuLinks = document.querySelectorAll(".overlay a");
 
 
     function toggleOverlayVisibility() {
@@ -127,10 +132,20 @@ function handleNarrowScreen() {
 
     hamburger.addEventListener("click", toggleOverlayVisibility);
 
-    closeButton.addEventListener("click", toggleOverlayVisibility);
-
     menuLinks.forEach(link => {
         link.addEventListener("click", toggleOverlayVisibility);
+    });
+
+    // Ajouter un écouteur d'événement pour le clic
+    boutonVoirPlus.addEventListener('click', function() {
+        // Sélectionner la div "projets-plus"
+        const projetsPlus = document.querySelector('.projets-plus');
+
+        // Changer la propriété display de "projets-plus" de none à block
+        projetsPlus.style.display = 'block';
+
+        // Changer la propriété display du bouton "voir-plus" de block à none
+        this.style.display = 'none';
     });
 }
 
@@ -167,6 +182,18 @@ function handleWideScreen() {
             });
         }
     });
+
+    // Ajouter un écouteur d'événement pour le clic
+    boutonVoirPlus.addEventListener('click', function() {
+        // Sélectionner la div "projets-plus"
+        const projetsPlus = document.querySelector('.projets-plus');
+
+        // Changer la propriété display de "projets-plus" de none à block
+        projetsPlus.style.display = 'grid';
+
+        // Changer la propriété display du bouton "voir-plus" de block à none
+        this.style.display = 'none';
+    });
     
 
 }
@@ -189,3 +216,5 @@ window.addEventListener('load', function() {
 window.addEventListener('resize', function() {
     applyScriptsBasedOnAspectRatio();
 });
+
+

@@ -22,6 +22,7 @@ function handleNarrowScreen() {
     hamburger.style.zIndex = "1000"; // Ensure it appears above other elements
     hamburger.style.position = "relative"; // Adjust positioning if necessary
     const overlay = document.querySelector(".overlay");
+    const menuLinks = document.querySelectorAll(".overlay a");
 
   
     function toggleOverlayVisibility() {
