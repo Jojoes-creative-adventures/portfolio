@@ -146,6 +146,7 @@ function handleNarrowScreen() {
 
         // Changer la propriété display du bouton "voir-plus" de block à none
         this.style.display = 'none';
+        ScrollTrigger.refresh(true)
     });
 }
 
@@ -193,6 +194,8 @@ function handleWideScreen() {
 
         // Changer la propriété display du bouton "voir-plus" de block à none
         this.style.display = 'none';
+
+        ScrollTrigger.refresh(true)
     });
     
 
